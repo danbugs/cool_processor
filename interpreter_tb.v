@@ -6,7 +6,7 @@ wire[3:0] op_code;
 wire[2:0] dest_reg;
 wire[2:0] src_reg_1;
 wire[2:0] src_reg_2;
-wire shift;
+wire[6:0] shift;
 
 initial begin
     #10 inst = 16'haaaa;

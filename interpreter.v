@@ -14,7 +14,7 @@ output[3:0] op_code;
 output[2:0] dest_reg;
 output[2:0] src_reg_1;
 output[2:0] src_reg_2;
-output shift;
+output[6:0] shift;
 
 assign cond = inst[15:14];
 assign op_code = inst[13:10];
