@@ -1,6 +1,6 @@
  
- module memory (Enable,ReadWrite,Address,DataIn,DataOut);
-    input  Enable,ReadWrite;
+ module memory (Enable,Address,DataIn,DataOut);
+    input  Enable;
     input [15:0] DataIn;
     input [3:0] Address;
     output reg[15:0] DataOut;
@@ -9,9 +9,6 @@
     
 always @*
 	   if (Enable)
-             if (ReadWrite) 
-              DataOut = Memory[Address];  		//Read
-             else
-              Memory[Address] = DataIn;   		//Write
+            DataOut = Memory[Address];  		//Read
 	   else DataOut = 16'bz;        	//High impedance state
 endmodule

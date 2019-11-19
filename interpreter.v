@@ -21,6 +21,6 @@ assign op_code = inst[13:10];
 assign dest_reg = inst[9:7];
 assign src_reg_1 = inst[6:4];
 assign src_reg_2 = inst[3:1];
-assign shift = inst[0];
+assign shift = inst[6:0];
 
 endmodule
