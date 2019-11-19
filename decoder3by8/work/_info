@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Sheyla Alvarez/Desktop/SheylaProcessor
+vdecoder3by8
+Z0 !s110 1573942967
+!i10b 1
+!s100 @UQD:UDi1iMVb_IKSa9m[1
+IQP:;jZmA`o[facLBSdNBn2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Sheyla Alvarez/Desktop/decoder3by8
+w1573942958
+Z3 8C:/Users/Sheyla Alvarez/Desktop/decoder3by8/decoder3by8.v
+Z4 FC:/Users/Sheyla Alvarez/Desktop/decoder3by8/decoder3by8.v
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1573942967.000000
+Z7 !s107 C:/Users/Sheyla Alvarez/Desktop/decoder3by8/decoder3by8.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sheyla Alvarez/Desktop/decoder3by8/decoder3by8.v|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vtest_dec
+R0
+!i10b 1
+!s100 B6z^a69Wdd6z_g7?0E3Un0
+INAzR8Yo8eHFLdoKDP;BKU3
+R1
+R2
+w1573942964
+8C:/Users/Sheyla Alvarez/Desktop/decoder3by8/test_decoder.v
+FC:/Users/Sheyla Alvarez/Desktop/decoder3by8/test_decoder.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sheyla Alvarez/Desktop/decoder3by8/test_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sheyla Alvarez/Desktop/decoder3by8/test_decoder.v|
+!i113 1
+R9
+R10
