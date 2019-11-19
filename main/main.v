@@ -3,6 +3,7 @@ module main;
     reg en;
     reg[3:0] address;
     wire[15:0] data_out;
+    integer pc;
 
     // for interpreter
     wire[1:0] cond;
@@ -23,17 +24,14 @@ module main;
     // for mux
     wire[15:0] r1, r2;
 
-    // for ALU
-
 
     memory rom(en, address, data_out);
 
     initial begin
         $readmemh("Data_file.txt", rom.Memory);
-        $display("### MEMORY ###");
         #0 en = 0; 
 
-        for (int pc = 0; pc < 9 ; pc = pc + 1) begin
+        for (pc = 0; pc < 9 ; pc = pc + 1) begin
             #10 en = 1; address = pc;
         end
     end

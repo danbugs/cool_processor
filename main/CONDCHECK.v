@@ -3,7 +3,7 @@ module CONDCHECK (Cond, Flag, Out);
 
 input [1:0] Cond;
 output reg Out;
-input [3:0] Flag;
+inout [3:0] Flag;
 
 always @ *
 begin

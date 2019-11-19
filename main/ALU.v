@@ -31,26 +31,26 @@ wire[3:0] add_flag,
 assign Shift_N = Ld_Sh[3:0]; //value to shift by (0< n <15)
 assign Load_N = Ld_Sh; //constant to load (0< n <127)
 
-CONDCHECK (Cond, Flag, cond_check);
-ADD(Reg1, Reg2, add_out, add_flag);
-SUB(Reg1, Reg2, sub_out, sub_flag);
-MUL(Reg1, Reg2, mul_out, mul_flag);
-BIT_OR(Reg1, Reg2, bor_out);
-BIT_AND(Reg1, Reg2, band_out);
-BIT_XOR(Reg1, Reg2, bxor_out);
-MOV_n (Load_N, movn_out);
-MOV (Reg1, mov_out);
-SHIFT_R(Reg1, Shift_N, sr_out);
-SHIFT_L(Reg1, Shift_N, sl_out);
-ROTATE_R (Reg1, Shift_N, rr_out);
-CMP (Reg1, Reg2, cmp_flag);
+CONDCHECK cc(Cond, Flag, cond_check);
+ADD adder(Reg1, Reg2, add_out, add_flag);
+SUB subber(Reg1, Reg2, sub_out, sub_flag);
+MUL muller(Reg1, Reg2, mul_out, mul_flag);
+BIT_OR bor(Reg1, Reg2, bor_out);
+BIT_AND band(Reg1, Reg2, band_out);
+BIT_XOR bxor(Reg1, Reg2, bxor_out);
+MOV_n mvn(Load_N, movn_out);
+MOV mv(Reg1, mov_out);
+SHIFT_R sr(Reg1, Shift_N, sr_out);
+SHIFT_L sl(Reg1, Shift_N, sl_out);
+ROTATE_R rr(Reg1, Shift_N, rr_out);
+CMP cp(Reg1, Reg2, cmp_flag);
 
-always @ *
-	if(cond_check)
+always @ * begin
+	if(cond_check) begin
 		case(Op_C)
 			4'b0000: begin 
 				dest_reg = add_out;
-				Flag = add_flag
+				Flag = add_flag;
 				end
 			4'b0001: begin
 				dest_reg = sub_out;
@@ -74,7 +74,7 @@ always @ *
 				Flag = Flag;
 				end	
 		endcase
-	else begin // cond not met
+	else // cond not met
 		dest_reg = dest_reg;
 		Flag = Flag;		
 	end
