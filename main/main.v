@@ -28,7 +28,7 @@ module main;
     memory rom(en, address, data_out);
 
     initial begin
-        $readmemh("Data_file.txt", rom.Memory);
+        $readmemh("Data_file.txt", rom.rom);
         #0 en = 0; 
 
         for (pc = 0; pc < 9 ; pc = pc + 1) begin
