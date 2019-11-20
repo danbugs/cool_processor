@@ -7,7 +7,6 @@ module interpreter(
     src_reg_2,
     shift
 );
-
 input[15:0] inst;
 output[1:0] cond;
 output[3:0] op_code;
